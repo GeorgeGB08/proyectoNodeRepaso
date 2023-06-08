@@ -2,7 +2,7 @@ const express = require("express")
 const cors = require("cors")
 
 const userRouter = require("./routes/user.routes") 
-const repairRoutes = require("./routes/repairs.routes")
+const repairRouter = require("./routes/repairs.routes")
 const router = require("./routes/user.routes")
 
 
@@ -12,6 +12,6 @@ app.use(express.json())
 app.use(cors()) 
 
 app.use("/api/v1/users", userRouter)
-app.use("/api/v1/users", repairRoutes)
+app.use("/api/v1/repairs", repairRouter)
 
 module.exports = app 
